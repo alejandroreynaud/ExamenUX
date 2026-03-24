@@ -1,6 +1,6 @@
 const { Category } = require('../models');
 
-exports.create = async (req, res) => {
+let createCategory = async (req, res) => {
     try {
         const nuevoCategory = await Impuesto.create(req.body);
         res.status(201).json({ message: "Nueva Category", data: nuevoCategory });
@@ -9,7 +9,7 @@ exports.create = async (req, res) => {
     }
 };
 
-exports.findAll = async (req, res) => {
+let getAll= async (req, res) => {
     try {
         const impuestos = await Impuesto.findAll();
         res.status(200).json(impuestos);
@@ -48,5 +48,7 @@ let getcategoryId = async (request, response) => {
 
 module.exports = {
     getcategoryId,
+    getAll,
+    createCategory
     
 };

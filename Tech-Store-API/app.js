@@ -5,7 +5,7 @@ const logger = require('morgan');
 const cors = require('cors');
 require('dotenv').config();
 
-const categoryRouter = require('./routes/categories');
+const categoryRouter = require('./routes/categorys');
 const productRouter = require('./routes/products');
 const swaggerSetup = require('./config/swagger'); 
 
@@ -21,10 +21,8 @@ app.use('/products', productRouter);
 
 swaggerSetup(app);
 
-// Ruta de prueba
 app.get('/', (req, res) => {
-  res.send('API Municipalidad Corriendo');
+  res.send('API Inventario Corriendo');
 });
 
-// 5. EXPORTAR APP
 module.exports = app;
