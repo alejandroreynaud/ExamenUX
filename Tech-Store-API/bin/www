@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+const app = require('../app');
+const http = require('http');
+
+const port = process.env.PORT || '3000';
+app.set('port', port);
+
+const server = http.createServer(app);
+
+server.listen(port, () => {
+  console.log(`Servidor corriendo en el puerto ${port}`);
+});
+
+/*
+RUTA
+C:\Program Files\PostgreSQL\18\bin 
+
+CREAR BD
+.\psql -U postgres
+Alo200515
+CREATE DATABASE municipalidad_db;
+\c municipalidad_db
+
+
+
+*/

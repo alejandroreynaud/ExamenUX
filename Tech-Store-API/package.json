@@ -1,0 +1,34 @@
+{
+  "name": "tech-store-api",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "debug": "^4.4.3",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "http-errors": "^2.0.1",
+    "morgan": "^1.10.1",
+    "pg": "^8.20.0",
+    "pg-hstore": "^2.3.4",
+    "pug": "^3.0.4",
+    "sequelize": "^6.37.8",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
+  },
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "create:DB": "sequelize-cli db:create",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:m:undo": "sequelize-cli db:migrate:undo:all",
+    "db:seed": "sequelize-cli db:seed:all",
+    "db:seed:undo": "sequelize-cli db:seed:undo:all"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "sequelize-cli": "^6.6.5"
+  }
+}

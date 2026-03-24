@@ -1,0 +1,13 @@
+openapi: 3.0.0
+info:
+  title: TechStore API
+  version: 1.0.0
+  description: API para gestionar inventario de productos.
+
+servers:
+- url: http://localhost:3000
+  description: Servidor local de desarrollo
+
+paths:
+  /contribuyente:
+    $ref: './paths/product.yaml'

@@ -1,0 +1,34 @@
+post:
+  summary: Crear nuevo inventario
+  tags: [ Category ]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            nombre:
+              type: string
+              example: "Limpieza"
+            activo:
+              type: boolean
+              example: true
+  responses:
+    '201':
+      description: Creado con éxito
+get:
+  summary: Listar categorias
+  tags: [ Category ]
+  responses:
+    '200':
+      description: Productos encontrados
+      content:
+        application/json:
+          example:
+            - id: 1
+              nombre: "Cloro"
+              activo: true
+            - id: 2
+              nombre: "Jabon"
+              activo: true
