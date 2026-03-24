@@ -17,3 +17,36 @@ exports.findAll = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+
+let getcategoryId = async (request, response) => {
+    try {
+
+        const id = request.params.id;
+        let categories = await product.findByPk(id);
+
+        if (!categories) {
+            return response.status(404).json({
+                status: 404,
+                message: "Category no encontrada"
+            });
+        }
+
+        response.status(200).json({
+            status: 200,
+            data: categories
+        });
+
+    } catch (error) {
+
+        response.status(500).json({
+            status: 500,
+            message: error.message
+        });
+
+    }
+};
+
+module.exports = {
+    getcategoryId,
+    
+};

@@ -1,6 +1,5 @@
 const { Product } = require('../models');
 
-// Registrar un nuevo producto
 exports.create = async (req, res) => {
     try {
         const nuevoProducto = await Pago.create(req.body);
